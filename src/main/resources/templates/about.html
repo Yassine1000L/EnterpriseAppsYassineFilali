@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="nl">
+<head th:replace="~{fragments/header :: head}"></head>
+<body class="overflow-x-hidden">
+<nav th:replace="~{fragments/header :: header}"></nav>
+<main class="max-w-6xl mx-auto px-4 py-8">
+    <h1 class="text-3xl font-bold text-gray-800 mb-6">Over ons</h1>
+
+    <div class="bg-white rounded-lg shadow p-6 space-y-6">
+        <section>
+            <h2 class="text-xl font-semibold text-gray-800 mb-2">Over ons</h2>
+            <p class="text-gray-700">
+                NGO Anderlecht is een lokale vereniging die zich inzet voor een warme en solidaire gemeenschap in de regio Anderlecht. Wij organiseren het hele jaar door evenementen die buurtbewoners samenbrengen, van buurtfeesten en workshops tot taallessen en sportdagen.
+            </p>
+            <p class="text-gray-700 mt-4">
+                Onze werking steunt op vrijwilligers en samenwerkingen met lokale partners zoals het OCMW, VDAB en Caritas. Samen zorgen wij ervoor dat iedereen in Anderlecht toegang heeft tot ontmoeting, ondersteuning en ontplooiingskansen.
+            </p>
+        </section>
+
+        <section>
+            <h2 class="text-xl font-semibold text-gray-800 mb-2">Onze missie</h2>
+            <p class="text-gray-700">
+                Wij geloven in een sterke buurt waar iedereen meetelt. Daarom organiseren wij laagdrempelige activiteiten die bijdragen aan sociale cohesie, duurzaamheid en welzijn. Van repair cafés en kledinginzamelingen tot infosessies over energietoelagen – alles wat wij doen is gratis of toegankelijk voor iedereen.
+            </p>
+        </section>
+
+        <section>
+            <h2 class="text-xl font-semibold text-gray-800 mb-2">Contactgegevens</h2>
+            <address class="not-italic text-gray-700">
+                <strong>NGO Anderlecht</strong><br>
+                Nijverheidskaai 170<br>
+                1070 Anderlecht<br>
+                België<br><br>
+                <strong>Telefoon:</strong> +32 (0)2 123 45 67<br>
+                <strong>Email:</strong> <a href="mailto:info@ngo-anderlecht.be" class="text-emerald-700 hover:underline">info@ngo-anderlecht.be</a>
+            </address>
+        </section>
+    </div>
+</main>
+<div th:replace="~{fragments/footer :: footer}"></div>
+</body>
+</html>

@@ -4,51 +4,51 @@
 <body class="overflow-x-hidden">
 <nav th:replace="~{fragments/header :: header}"></nav>
 <main class="max-w-6xl mx-auto px-4 py-8">
-    <h1 class="text-3xl font-bold text-gray-800 mb-6">Nieuw evenement</h1>
+    <h1 class="text-3xl font-extrabold text-brand-900 mb-6">Nieuw evenement</h1>
 
-    <form th:action="@{/new}" th:object="${evenement}" method="post" class="bg-white rounded-lg shadow p-6 space-y-4 max-w-2xl">
+    <form th:action="@{/new}" th:object="${evenement}" method="post" class="bg-white rounded-2xl card-shadow p-8 space-y-5 max-w-2xl">
         <div>
-            <label class="block text-sm font-medium text-gray-700">Titel</label>
-            <input type="text" th:field="*{titel}" class="mt-1 block w-full border border-gray-300 rounded-md p-2 focus:ring-emerald-500 focus:border-emerald-500">
-            <p th:if="${#fields.hasErrors('titel')}" class="text-red-600 text-sm mt-1" th:errors="*{titel}">Fout</p>
+            <label class="block text-sm font-bold text-brand-800 mb-1">Titel</label>
+            <input type="text" th:field="*{titel}" class="block w-full border-2 border-brand-200 rounded-xl p-3 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition">
+            <p th:if="${#fields.hasErrors('titel')}" class="text-red-500 text-sm mt-1 font-medium" th:errors="*{titel}">Fout</p>
         </div>
 
         <div>
-            <label class="block text-sm font-medium text-gray-700">Omschrijving</label>
-            <textarea th:field="*{omschrijving}" rows="4" class="mt-1 block w-full border border-gray-300 rounded-md p-2 focus:ring-emerald-500 focus:border-emerald-500"></textarea>
-            <p th:if="${#fields.hasErrors('omschrijving')}" class="text-red-600 text-sm mt-1" th:errors="*{omschrijving}">Fout</p>
+            <label class="block text-sm font-bold text-brand-800 mb-1">Omschrijving</label>
+            <textarea th:field="*{omschrijving}" rows="4" class="block w-full border-2 border-brand-200 rounded-xl p-3 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition"></textarea>
+            <p th:if="${#fields.hasErrors('omschrijving')}" class="text-red-500 text-sm mt-1 font-medium" th:errors="*{omschrijving}">Fout</p>
         </div>
 
         <div>
-            <label class="block text-sm font-medium text-gray-700">Organisatie</label>
-            <input type="text" th:field="*{organisatie}" class="mt-1 block w-full border border-gray-300 rounded-md p-2 focus:ring-emerald-500 focus:border-emerald-500">
-            <p th:if="${#fields.hasErrors('organisatie')}" class="text-red-600 text-sm mt-1" th:errors="*{organisatie}">Fout</p>
+            <label class="block text-sm font-bold text-brand-800 mb-1">Organisatie</label>
+            <input type="text" th:field="*{organisatie}" class="block w-full border-2 border-brand-200 rounded-xl p-3 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition">
+            <p th:if="${#fields.hasErrors('organisatie')}" class="text-red-500 text-sm mt-1 font-medium" th:errors="*{organisatie}">Fout</p>
         </div>
 
         <div>
-            <label class="block text-sm font-medium text-gray-700">Mail contactpersoon</label>
-            <input type="email" th:field="*{mailContactpersoon}" class="mt-1 block w-full border border-gray-300 rounded-md p-2 focus:ring-emerald-500 focus:border-emerald-500">
-            <p th:if="${#fields.hasErrors('mailContactpersoon')}" class="text-red-600 text-sm mt-1" th:errors="*{mailContactpersoon}">Fout</p>
+            <label class="block text-sm font-bold text-brand-800 mb-1">Mail contactpersoon</label>
+            <input type="email" th:field="*{mailContactpersoon}" class="block w-full border-2 border-brand-200 rounded-xl p-3 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition">
+            <p th:if="${#fields.hasErrors('mailContactpersoon')}" class="text-red-500 text-sm mt-1 font-medium" th:errors="*{mailContactpersoon}">Fout</p>
         </div>
 
         <div>
-            <label class="block text-sm font-medium text-gray-700">Tijdstip</label>
-            <input type="datetime-local" th:field="*{tijdstip}" class="mt-1 block w-full border border-gray-300 rounded-md p-2 focus:ring-emerald-500 focus:border-emerald-500">
-            <p th:if="${#fields.hasErrors('tijdstip')}" class="text-red-600 text-sm mt-1" th:errors="*{tijdstip}">Fout</p>
+            <label class="block text-sm font-bold text-brand-800 mb-1">Tijdstip</label>
+            <input type="datetime-local" th:field="*{tijdstip}" class="block w-full border-2 border-brand-200 rounded-xl p-3 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition">
+            <p th:if="${#fields.hasErrors('tijdstip')}" class="text-red-500 text-sm mt-1 font-medium" th:errors="*{tijdstip}">Fout</p>
         </div>
 
         <div>
-            <label class="block text-sm font-medium text-gray-700">Locatie</label>
-            <select th:field="*{locatieId}" class="mt-1 block w-full border border-gray-300 rounded-md p-2 focus:ring-emerald-500 focus:border-emerald-500">
+            <label class="block text-sm font-bold text-brand-800 mb-1">Locatie</label>
+            <select th:field="*{locatieId}" class="block w-full border-2 border-brand-200 rounded-xl p-3 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition">
                 <option value="">-- Kies een locatie --</option>
                 <option th:each="l : ${locaties}" th:value="${l.id}" th:text="${l.naam + ' - ' + l.adres}"></option>
             </select>
-            <p th:if="${#fields.hasErrors('locatieId')}" class="text-red-600 text-sm mt-1" th:errors="*{locatieId}">Fout</p>
+            <p th:if="${#fields.hasErrors('locatieId')}" class="text-red-500 text-sm mt-1 font-medium" th:errors="*{locatieId}">Fout</p>
         </div>
 
-        <div class="pt-4">
-            <button type="submit" class="bg-emerald-700 text-white px-6 py-3 rounded-lg hover:bg-emerald-800 shadow">Opslaan</button>
-            <a th:href="@{/}" class="ml-4 text-gray-600 hover:text-gray-800">Annuleren</a>
+        <div class="pt-4 flex items-center gap-4">
+            <button type="submit" class="btn-brand text-white px-8 py-3 rounded-full font-bold shadow-lg">Opslaan</button>
+            <a th:href="@{/}" class="text-brand-500 hover:text-brand-700 font-semibold transition">Annuleren</a>
         </div>
     </form>
 </main>

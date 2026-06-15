@@ -21,6 +21,9 @@ opnemen met de Administrator door een mail door te sturen.
 
 ## Hoe gebruik je de website?
 
+<img width="959" height="412" alt="image" src="https://github.com/user-attachments/assets/41a5c282-3b80-4f2e-adf1-e66c53873401" />
+
+
 Homepage (/) - Je ziet een tabel met de 10 laatste evenementen. 
 
 Klik op "Bekijk" voor details van een evenement je ziet dan de tijstip, locatie, beschrijving en contactgegevens van de organisator.

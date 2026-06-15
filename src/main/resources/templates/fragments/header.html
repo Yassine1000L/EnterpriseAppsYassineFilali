@@ -5,17 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NGO Anderlecht - Samen voor Gemeenschap</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#eef2ff',
+                            100: '#e0e7ff',
+                            200: '#c7d2fe',
+                            300: '#a5b4fc',
+                            400: '#818cf8',
+                            500: '#6366f1',
+                            600: '#4f46e5',
+                            700: '#4338ca',
+                            800: '#3730a3',
+                            900: '#312e81',
+                            950: '#1e1b4b',
+                        },
+                        accent: {
+                            400: '#fb923c',
+                            500: '#f97316',
+                            600: '#ea580c',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #f8fafc; }
+        .nav-gradient { background: linear-gradient(135deg, #312e81 0%, #4338ca 50%, #4f46e5 100%); }
+        .card-shadow { box-shadow: 0 4px 24px rgba(49, 46, 129, 0.10); }
+        .btn-brand { background: linear-gradient(135deg, #4f46e5, #6366f1); transition: all 0.2s; }
+        .btn-brand:hover { background: linear-gradient(135deg, #4338ca, #4f46e5); transform: translateY(-1px); box-shadow: 0 4px 12px rgba(79, 70, 229, 0.4); }
+        .btn-accent { background: linear-gradient(135deg, #ea580c, #f97316); transition: all 0.2s; }
+        .btn-accent:hover { background: linear-gradient(135deg, #c2410c, #ea580c); transform: translateY(-1px); box-shadow: 0 4px 12px rgba(249, 115, 22, 0.4); }
+        .link-hover { position: relative; }
+        .link-hover::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 0; height: 2px; background: #fb923c; transition: width 0.3s; }
+        .link-hover:hover::after { width: 100%; }
+    </style>
 </head>
 <body>
-<nav th:fragment="header" class="bg-emerald-700 text-white shadow-lg sticky top-0 z-50">
+<nav th:fragment="header" class="nav-gradient text-white shadow-xl sticky top-0 z-50">
     <div class="max-w-6xl mx-auto px-4">
         <div class="flex items-center justify-between h-16 gap-4">
-            <a th:href="@{/}" class="text-xl font-bold hover:text-emerald-200 whitespace-nowrap">NGO Anderlecht</a>
+            <a th:href="@{/}" class="text-xl font-extrabold tracking-wide hover:text-orange-300 whitespace-nowrap flex items-center gap-2">
+                <span class="bg-orange-500 text-white w-8 h-8 rounded-lg flex items-center justify-center text-sm font-bold">N</span>
+                NGO Anderlecht
+            </a>
             <div class="flex items-center gap-4 md:gap-6 flex-wrap">
-                <a th:href="@{/}" class="hover:text-emerald-200 whitespace-nowrap">Evenementen</a>
-                <a th:href="@{/new}" class="hover:text-emerald-200 whitespace-nowrap">Nieuw evenement</a>
-                <a th:href="@{/about}" class="hover:text-emerald-200 whitespace-nowrap">Over ons</a>
-                <a th:href="@{/contact}" class="hover:text-emerald-200 whitespace-nowrap">Contact</a>
+                <a th:href="@{/}" class="link-hover hover:text-orange-300 whitespace-nowrap font-medium">Evenementen</a>
+                <a th:href="@{/new}" class="link-hover hover:text-orange-300 whitespace-nowrap font-medium">Nieuw evenement</a>
+                <a th:href="@{/about}" class="link-hover hover:text-orange-300 whitespace-nowrap font-medium">Over ons</a>
+                <a th:href="@{/contact}" class="link-hover hover:text-orange-300 whitespace-nowrap font-medium">Contact</a>
             </div>
         </div>
     </div>

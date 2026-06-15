@@ -57,7 +57,7 @@ Mailtrap documentation - https://help.mailtrap.io/
 
 src/main/java/com/example/enterpriseappsyassinefilali/
 config/
-  DataInitializer.java - Start data (12 events, 3 locaties)
+  DataInitializer.java - Start data (12 events en 3 locaties)
 controller/
   IndexController.java - Homepage
   NewController.java - Nieuw evenement formulier
@@ -85,24 +85,31 @@ templates/
   contact.html
 application.properties
 
+Zoals je ziet, is het een standaard spring boot project met Maeven
+De controllers zorgen voor de routing en het ophalen van data uit de database via de repositories 
+De services bevatten de business logica en de modellen representeren de data
+
 ## Mailtrap instellen
 
-1. Ga naar https://mailtrap.io en maak een gratis account aan
-2. Klik op "Testing" → "Email Sandbox" → "Start Testing"
+1. Ga naar https://mailtrap.io en maak een account aan
+2. Klik op "Testing" dan op "Email Sandbox" dan "Start Testing"
 3. Maak een nieuwe inbox aan (bijv. "NGO Anderlecht")
-4. Klik op je inbox → tab "SMTP settings" → kopieer username en password
-5. Plak die in application.properties:
+4. Klik op je inbox daarna tab "SMTP settings" en kopieer username en password
+5. Plak die in application.properties zo:
+                                            spring.mail.username=je-username
+                                            spring.mail.password=je-password
 
-spring.mail.username=je-username
-spring.mail.password=je-password
 
-6. Ga naar http://localhost:9090/contact en verstuur een bericht
+6. Ga naar /contact pagina en stuur een mail naar de administrators en je krijgt een bevestiging 
+   dat de mail is verstuurd.
 7. Kijk in je Mailtrap inbox om de mail te lezen
 
-Link naar onze inbox: https://mailtrap.io/sandboxes/4713289/settings
+Link naar mijn inbox: https://mailtrap.io/sandboxes/4713289/settings
+
+
 
 ## Opmerkingen
 
-De database is in-memory (H2), dus bij elke herstart verdwijnen de data.
-De H2 console is beschikbaar op http://localhost:9090/h2-console (JDBC URL: jdbc:h2:mem:ngo).
+De database is in-memory (H2), dus bij elke herstart verdwijnen de data
+De H2 console is beschikbaar op http://localhost:9090/h2-console (JDBC URL: jdbc:h2:mem:ngo)
 Alle evenementen zijn voorbeeld data voor het prototype.

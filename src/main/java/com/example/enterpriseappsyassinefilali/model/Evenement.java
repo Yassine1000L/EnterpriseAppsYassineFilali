@@ -36,7 +36,6 @@ public class Evenement {
     private Locatie locatie;
 
     @Transient
-    @NotNull
     @Positive
     private Long locatieId;
 

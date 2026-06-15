@@ -104,7 +104,7 @@ application.properties
 
 ## Mailtrap instellen
 
-De contactpagina verstuurt e-mails via Mailtrap (fictief, voor testdoeleinden).
+De contactpagina verstuurt e-mails via Mailtrap.
 
 ### Stap 1: Maak een Mailtrap account aan
 1. Ga naar https://mailtrap.io en maak een gratis account aan

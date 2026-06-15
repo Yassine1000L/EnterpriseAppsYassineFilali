@@ -63,6 +63,9 @@ Mailtrap documentation - https://help.mailtrap.io/
 
 ## Projectstructuur
 
+<img width="271" height="288" alt="image" src="https://github.com/user-attachments/assets/8c1bd2fb-b810-4dd3-bea1-aa917440c43c" />
+
+
 src/main/java/com/example/enterpriseappsyassinefilali/
 config/
   DataInitializer.java - Start data (12 events en 3 locaties)

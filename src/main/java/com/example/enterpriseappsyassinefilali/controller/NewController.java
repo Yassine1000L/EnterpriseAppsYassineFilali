@@ -30,15 +30,16 @@ public class NewController {
 
     @PostMapping("/new")
     public String submitForm(@Valid Evenement evenement, BindingResult result, Model model) {
+        if (evenement.getLocatieId() == null) {
+            result.rejectValue("locatieId", "NotNull", "Locatie is verplicht");
+        }
         if (result.hasErrors()) {
             model.addAttribute("locaties", locatieRepository.findAll());
             return "new";
         }
-        if (evenement.getLocatieId() != null) {
-            locatieRepository.findById(evenement.getLocatieId())
-                .ifPresent(evenement::setLocatie);
-        }
+        locatieRepository.findById(evenement.getLocatieId())
+            .ifPresent(evenement::setLocatie);
         evenementService.opslaan(evenement);
-        return "redirect:/";
+        return "redirect:/?succes=toegevoegd";
     }
 }

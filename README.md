@@ -32,21 +32,21 @@ Je komt hier via de "Bekijk" knop op de homepage.
 
 Over ons (/about) - Informatie over de NGO, adres van campus Kaai en contactgegevens.
 
-Contact (/contact) - Een formulier om een bericht te sturen naar de administrators, werkt via mailtrap.io
+Contact (/contact) - Een formulier om een bericht te sturen naar de administrators via mailtrap.io
 
 ## Externe libraries & frameworks
 
 Spring Boot 4.0.6 - Framework voor de webapp
 Thymeleaf - Voor HTML templates
 Spring Data JPA - Database (opslaan van evenementen en locaties)
-H2 Database - In-memory database, geen installatie nodig
+H2 Database - In-memory database geen installatie nodig
 Spring Validation - Voor formulier validatie
 Spring Mail - Voor emails via Mailtrap
-Tailwind CSS (via CDN) - Voor de styling
+Tailwind CSS - Voor de styling
 
 ## Gebruikte tutorials & documentatie
 
-Cursus Enterprise Apps (hogeschool) - Hoofdbron voor de opbouw van het project
+Cursus Enterprise Apps - voor de opbouw van het project
 Spring Boot documentation - https://docs.spring.io/spring-boot/
 Thymeleaf documentation - https://www.thymeleaf.org/documentation.html
 Tailwind CSS documentation - https://tailwindcss.com/docs

@@ -104,12 +104,28 @@ application.properties
 
 ## Mailtrap instellen
 
-Voor de contactpagina moet je nog je eigen Mailtrap credentials invullen in application.properties:
+De contactpagina verstuurt e-mails via Mailtrap (fictief, voor testdoeleinden).
 
-spring.mail.username=jouw-mailtrap-username
-spring.mail.password=jouw-mailtrap-password
+### Stap 1: Maak een Mailtrap account aan
+1. Ga naar https://mailtrap.io en maak een gratis account aan
+2. Klik op "Testing" → "Email Sandbox" → "Start Testing"
+3. Maak een nieuwe inbox aan (bijv. "NGO Anderlecht")
 
-Je kan een gratis account aanmaken op https://mailtrap.io en daar een testing inbox aanmaken.
+### Stap 2: Vul je credentials in
+In `application.properties` staan de Mailtrap SMTP instellingen:
+```
+spring.mail.host=sandbox.smtp.mailtrap.io
+spring.mail.port=2525
+spring.mail.username=<jouw-username>
+spring.mail.password=<jouw-password>
+```
+Vervang `<jouw-username>` en `<jouw-password>` door je eigen gegevens uit Mailtrap.
+
+### Stap 3: Lees je mails
+- Ga naar https://mailtrap.io/inboxes
+- Klik op je inbox
+- Daar zie je alle binnenkomende mails die vanuit de website verstuurd zijn
+- Onze inbox: https://mailtrap.io/sandboxes/4713289/settings
 
 ## Opmerkingen
 

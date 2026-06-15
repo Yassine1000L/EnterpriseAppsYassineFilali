@@ -1,4 +1,3 @@
-
 # Enterprise Apps Yassine Filali
 
 Dit is mijn project voor het vak Enterprise Apps. Het is een werkend prototype van

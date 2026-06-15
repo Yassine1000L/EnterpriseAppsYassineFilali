@@ -4,42 +4,44 @@
 <body class="overflow-x-hidden">
 <nav th:replace="~{fragments/header :: header}"></nav>
 <main class="max-w-6xl mx-auto px-4 py-8">
-    <h1 class="text-3xl font-bold text-gray-800 mb-6">Contact</h1>
+    <h1 class="text-3xl font-extrabold text-brand-900 mb-6">Contact</h1>
 
-    <div th:if="${succes}" class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mb-4">
-        Uw bericht is succesvol verzonden! We nemen zo snel mogelijk contact met u op.
+    <div th:if="${succes}" class="bg-brand-50 border-l-4 border-brand-500 text-brand-800 px-5 py-4 rounded-r-lg mb-6 flex items-center gap-3">
+        <svg class="w-5 h-5 text-brand-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+        <span class="font-semibold">Uw bericht is succesvol verzonden!</span>
     </div>
-    <div th:if="${error}" class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4">
-        Er is een fout opgetreden bij het versturen van uw bericht. Probeer later opnieuw.
+    <div th:if="${error}" class="bg-red-50 border-l-4 border-red-500 text-red-800 px-5 py-4 rounded-r-lg mb-6 flex items-center gap-3">
+        <svg class="w-5 h-5 text-red-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/></svg>
+        <span class="font-semibold">Er is een fout opgetreden. Probeer later opnieuw.</span>
     </div>
 
-    <form th:action="@{/contact}" th:object="${contactBericht}" method="post" class="bg-white rounded-lg shadow p-6 space-y-4 max-w-2xl">
+    <form th:action="@{/contact}" th:object="${contactBericht}" method="post" class="bg-white rounded-2xl card-shadow p-8 space-y-5 max-w-2xl">
         <div>
-            <label class="block text-sm font-medium text-gray-700">Naam</label>
-            <input type="text" th:field="*{naam}" class="mt-1 block w-full border border-gray-300 rounded-md p-2 focus:ring-emerald-500 focus:border-emerald-500">
-            <p th:if="${#fields.hasErrors('naam')}" class="text-red-600 text-sm mt-1" th:errors="*{naam}">Fout</p>
+            <label class="block text-sm font-bold text-brand-800 mb-1">Naam</label>
+            <input type="text" th:field="*{naam}" class="block w-full border-2 border-brand-200 rounded-xl p-3 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition">
+            <p th:if="${#fields.hasErrors('naam')}" class="text-red-500 text-sm mt-1 font-medium" th:errors="*{naam}">Fout</p>
         </div>
 
         <div>
-            <label class="block text-sm font-medium text-gray-700">Email</label>
-            <input type="email" th:field="*{email}" class="mt-1 block w-full border border-gray-300 rounded-md p-2 focus:ring-emerald-500 focus:border-emerald-500">
-            <p th:if="${#fields.hasErrors('email')}" class="text-red-600 text-sm mt-1" th:errors="*{email}">Fout</p>
+            <label class="block text-sm font-bold text-brand-800 mb-1">Email</label>
+            <input type="email" th:field="*{email}" class="block w-full border-2 border-brand-200 rounded-xl p-3 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition">
+            <p th:if="${#fields.hasErrors('email')}" class="text-red-500 text-sm mt-1 font-medium" th:errors="*{email}">Fout</p>
         </div>
 
         <div>
-            <label class="block text-sm font-medium text-gray-700">Onderwerp</label>
-            <input type="text" th:field="*{onderwerp}" class="mt-1 block w-full border border-gray-300 rounded-md p-2 focus:ring-emerald-500 focus:border-emerald-500">
-            <p th:if="${#fields.hasErrors('onderwerp')}" class="text-red-600 text-sm mt-1" th:errors="*{onderwerp}">Fout</p>
+            <label class="block text-sm font-bold text-brand-800 mb-1">Onderwerp</label>
+            <input type="text" th:field="*{onderwerp}" class="block w-full border-2 border-brand-200 rounded-xl p-3 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition">
+            <p th:if="${#fields.hasErrors('onderwerp')}" class="text-red-500 text-sm mt-1 font-medium" th:errors="*{onderwerp}">Fout</p>
         </div>
 
         <div>
-            <label class="block text-sm font-medium text-gray-700">Bericht</label>
-            <textarea th:field="*{bericht}" rows="6" class="mt-1 block w-full border border-gray-300 rounded-md p-2 focus:ring-emerald-500 focus:border-emerald-500"></textarea>
-            <p th:if="${#fields.hasErrors('bericht')}" class="text-red-600 text-sm mt-1" th:errors="*{bericht}">Fout</p>
+            <label class="block text-sm font-bold text-brand-800 mb-1">Bericht</label>
+            <textarea th:field="*{bericht}" rows="6" class="block w-full border-2 border-brand-200 rounded-xl p-3 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition"></textarea>
+            <p th:if="${#fields.hasErrors('bericht')}" class="text-red-500 text-sm mt-1 font-medium" th:errors="*{bericht}">Fout</p>
         </div>
 
         <div class="pt-4">
-            <button type="submit" class="bg-emerald-700 text-white px-6 py-3 rounded-lg hover:bg-emerald-800 shadow">Verstuur bericht</button>
+            <button type="submit" class="btn-brand text-white px-8 py-3 rounded-full font-bold shadow-lg">Verstuur bericht</button>
         </div>
     </form>
 </main>

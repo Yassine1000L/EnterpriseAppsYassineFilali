@@ -12,7 +12,12 @@ opnemen met de Administrator door een mail door te sturen.
 2. Maven opent dan alle dependencies
 3. Open terminal in IntelliJ (Alt+F12) en typ:
    .\mvnw.cmd spring-boot:run
-4. Open je browser op: http://localhost:9090
+   
+<img width="898" height="370" alt="image" src="https://github.com/user-attachments/assets/1c253ab1-8ecc-4ec3-86d6-7f7de1f2e1c1" />
+
+5. Open je browser op: http://localhost:9090
+
+
 
 ## Hoe gebruik je de website?
 
@@ -105,6 +110,10 @@ De services bevatten de business logica en de modellen representeren de data
 7. Kijk in je Mailtrap inbox om de mail te lezen
 
 Link naar mijn inbox: https://mailtrap.io/sandboxes/4713289/settings
+
+<img width="959" height="410" alt="image" src="https://github.com/user-attachments/assets/64614694-fd95-45ca-a615-f40b3d43648e" />
+Hier komen de mails terecht en je kan ze daar zien in mailtrap
+
 
 
 

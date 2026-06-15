@@ -4,7 +4,7 @@
 Dit is mijn project voor het vak Enterprise Apps. Het is een werkend prototype van
 een website voor een Anderlechtse NGO die zich inzet voor gemeenschapsbouwen en hulp
 aan mensen die het minder breed hebben, je kan er evenementen vinden en toevoegen en contact 
-opnemen met de Administrator door een mail te sturen.
+opnemen met de Administrator door een mail door te sturen.
 
 ## Hoe start je het project?
 

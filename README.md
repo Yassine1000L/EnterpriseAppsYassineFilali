@@ -44,6 +44,15 @@ Spring Validation - Voor formulier validatie
 Spring Mail - Voor emails via Mailtrap
 Tailwind CSS (via CDN) - Voor de styling
 
+## Gebruikte tutorials & documentatie
+
+Cursus Enterprise Apps (hogeschool) - Hoofdbron voor de opbouw van het project
+Spring Boot documentation - https://docs.spring.io/spring-boot/
+Thymeleaf documentation - https://www.thymeleaf.org/documentation.html
+Tailwind CSS documentation - https://tailwindcss.com/docs
+Baeldung Spring Boot tutorials - https://www.baeldung.com/spring-boot
+Mailtrap documentation - https://help.mailtrap.io/
+
 ## Projectstructuur
 
 src/main/java/com/example/enterpriseappsyassinefilali/
